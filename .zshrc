@@ -1,15 +1,27 @@
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+source ~/.zsh/antigen.zsh
 
-export ZSH="/Users/adaoraul/.oh-my-zsh"
+# plugin management
+antigen use oh-my-zsh
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+antigen bundle command-not-found
+antigen bundle extract
+antigen bundle fzf
+antigen bundle git
+antigen bundle magic-enter
+antigen bundle ssh-agent
+antigen bundle tmux
 
-plugins=(git ruby rails shrink-path fzf docker osx brew)
+antigen bundle hlissner/zsh-autopair
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle HeroCC/LS_COLORS
 
-source $ZSH/oh-my-zsh.sh
+antigen theme romkatv/powerlevel10k
 
+antigen apply
+
+# config
 alias vim=nvim
 
 export BAT_THEME="Dracula"
@@ -37,3 +49,4 @@ setopt HIST_SAVE_NO_DUPS
 eval "$(rbenv init -)"
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f ~/.bin/snippets.sh ]] || source ~/.bin/snippets.sh
