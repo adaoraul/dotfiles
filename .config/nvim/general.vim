@@ -15,7 +15,9 @@ scriptencoding utf-8
 set autoindent
 set cursorline
 set encoding=utf8
+set inccommand=nosplit
 set laststatus=2
+set lazyredraw
 set linebreak
 set listchars=eol:¬,trail:•,extends:❯,precedes:❮,space:·
 set list
@@ -29,6 +31,13 @@ set splitbelow
 set splitright
 set wildmenu
 set wrap
+
+" search patterns
+set hlsearch
+set ignorecase
+set incsearch
+set showmatch
+set smartcase
 
 " mapping
 " buffer navigation HJKL
