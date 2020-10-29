@@ -1,3 +1,7 @@
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 source ~/.zsh/antigen.zsh
 
 # plugin management
@@ -49,4 +53,3 @@ setopt HIST_SAVE_NO_DUPS
 eval "$(rbenv init -)"
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-[[ ! -f ~/.bin/snippets.sh ]] || source ~/.bin/snippets.sh
