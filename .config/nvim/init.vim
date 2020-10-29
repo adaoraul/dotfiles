@@ -15,6 +15,7 @@ call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
 call minpac#add('tpope/vim-dispatch')
 call minpac#add('tpope/vim-endwise')
 call minpac#add('tpope/vim-fugitive')
+call minpac#add('tpope/vim-obsession')
 
 " look&feel
 call minpac#add('dracula/vim', {'name': 'dracula'})
